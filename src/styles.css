@@ -32,10 +32,16 @@ form {
   background: #e6e9f0;
   border-radius: 5px;
   max-width: 800px;
-  margin: 60px auto;
+  margin: 40px auto;
   padding: 30px 60px;
   font-family: "Roboto", sans-serif;
   color: #30475e;
+}
+
+#github-link {
+  display: inline;
+  padding: 265px;
+  margin: 0, auto;
 }
 
 .main-img {
