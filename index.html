@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link href="src/styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="form">
+        <form class="form-inline" id="cityForm">
+          <div class="form-group mx-sm-3 mb-2 city-field">
+            <input
+              type="search"
+              class="form-control shadow-sm"
+              id="inputPassword2"
+              placeholder="Enter a city"
+              size="40"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary mb-2 shadow-sm">
+            Search
+          </button>
+          <button
+            type="submit"
+            class="btn btn-primary mb-2 shadow-sm"
+            id="currentLocation"
+          >
+            Current Location
+          </button>
+        </form>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <img src="media/sunny.png" class="main-img" alt="sunny" />
+        </div>
+        <div class="col-6">
+          <h1>
+            <span id="degrees">88</span>
+            <span id="temperature">°C</span>
+          </h1>
+          <h3 id="city">Los Angeles</h3>
+          <h3 id="date">Friday, 11:45am</h3>
+          <h3 id="weather">Sunny</h3>
+          <h3 id="humidity">Humidity: 10%</h3>
+        </div>
+      </div>
+      <div class="row days">
+        <div class="col sm">
+          <div class="card shadow-sm">
+            <p class="card-text">90°</p>
+            <img src="media/sunny.png" class="card-img-top" alt="sunny" />
+            <h5 class="card-title">Sat</h5>
+          </div>
+        </div>
+        <div class="col sm">
+          <div class="card shadow-sm">
+            <p class="card-text">82°</p>
+            <img
+              src="media/partly-sunny.png"
+              class="card-img-top"
+              alt="partly sunny"
+            />
+            <h5 class="card-title">Sun</h5>
+          </div>
+        </div>
+        <div class="col sm">
+          <div class="card shadow-sm">
+            <p class="card-text">84°</p>
+            <img
+              src="media/partly-sunny.png"
+              class="card-img-top"
+              alt="partly sunny"
+            />
+            <h5 class="card-title">Mon</h5>
+          </div>
+        </div>
+        <div class="col sm">
+          <div class="card shadow-sm">
+            <p class="card-text">96°</p>
+            <img src="media/sunny.png" class="card-img-top" alt="sunny" />
+            <h5 class="card-title">Tues</h5>
+          </div>
+        </div>
+        <div class="col sm">
+          <div class="card shadow-sm">
+            <p class="card-text">94°</p>
+            <img src="media/sunny.png" class="card-img-top" alt="sunny" />
+            <h5 class="card-title">Wed</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
