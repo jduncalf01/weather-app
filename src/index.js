@@ -29,8 +29,9 @@ dayTime.innerHTML = formatDate(now);
 
 //Main Weather
 function showTemperature(response) {
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#degrees").innerHTML = Math.round(
-    response.data.main.temp
+    celsiusTemperature
   );
   document.querySelector("#weather").innerHTML = response.data.weather[0].main;
   document.querySelector("#city").innerHTML = response.data.name;
@@ -64,3 +65,30 @@ cityForm.addEventListener("submit", enterCity);
 
 let currentLocationButton = document.querySelector("#currentLocation");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+// Celsius/Fahrenheit Conversion
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#degrees");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+  let temperatureElement = document.querySelector("#degrees");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", showFahrenheitTemp);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", showCelsiusTemp);

@@ -68,3 +68,12 @@ form {
   font-weight: 600;
   margin-bottom: 5px;
 }
+
+.active {
+  color: #30475e;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+}
