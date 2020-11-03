@@ -87,6 +87,9 @@ function getCurrentWeather(position) {
   let apiKey = "203da696788c9b8d29dc0497010394bf";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showTemperature);
+  
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`
+  axios.get(apiUrl).then(showForecast);
 }
 
 let cityForm = document.querySelector("#cityForm");
